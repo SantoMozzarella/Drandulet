@@ -1,9 +1,6 @@
 #!/bin/bash
-echo "-------------------------------"
-ls /etc/wireguard/clients
-echo "-------------------------------"
 echo -e "\n"
-read -p "Enter wg config name for up without ".conf":" wgconfig
+read -p "Enter wg config name for up without ".CONF":" wgconfig
 echo -e "\n" 
 read -p "Enter macOS IP:" macip
 echo -e "\n" 
