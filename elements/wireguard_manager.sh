@@ -1094,6 +1094,7 @@ else
     echo "   13) Update Interface Port"
     echo "   14) Purge WireGuard Peers"
     echo "   15) Generate QR Code"
+    echo "   16) Exit"
     until [[ "${WIREGUARD_OPTIONS}" =~ ^[0-9]+$ ]] && [ "${WIREGUARD_OPTIONS}" -ge 1 ] && [ "${WIREGUARD_OPTIONS}" -le 15 ]; do
       read -rp "Select an Option [1-15]:" -e -i 0 WIREGUARD_OPTIONS
     done
@@ -1488,7 +1489,9 @@ PublicKey = ${SERVER_PUBKEY}" >>${WIREGUARD_CLIENT_PATH}/"${NEW_CLIENT_NAME}"-${
         echo "Peer's config --> ${WIREGUARD_CLIENT_PATH}/${VIEW_CLIENT_INFO}-${WIREGUARD_PUB_NIC}.conf"
       fi
       ;;
-    esac
+    16) ~/start.sh
+      ;;
+   esac
   }
 
   # Running Questions Command
