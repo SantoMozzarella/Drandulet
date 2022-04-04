@@ -30,7 +30,7 @@ case $CHOICE in
             curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/wireguard_manager.sh --create-dirs -o ~/drandulet/wireguard_manager.sh && chmod +x ~/drandulet/wireguard_manager.sh && bash ~/drandulet/wireguard_manager.sh
             ;;
         2)
-            curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/main/pf.sh --create-dirs -o ~/drandulet/pf.sh && chmod +x ~/drandulet/pf.sh && bash ~/drandulet/pf.sh
+            curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/pf.sh --create-dirs -o ~/drandulet/pf.sh && chmod +x ~/drandulet/elements/pf.sh && bash ~/drandulet/elements/pf.sh
             ;;
         
     	3)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/send_wg.sh --create-dirs -o ~/drandulet/send_wg.sh && chmod +x ~/drandulet/send_wg.sh && bash ~/drandulet/send_wg.sh
