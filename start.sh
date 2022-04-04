@@ -36,8 +36,8 @@ case $CHOICE in
     	3)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/send_wg.sh --create-dirs -o ~/drandulet/send_wg.sh && chmod +x ~/drandulet/send_wg.sh && bash ~/drandulet/send_wg.sh
             ;;
 	
-	    4)  reboot
-	        ;;
+	4)  reboot
+	    ;;
     	
     	5)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/reset_mac.sh --create-dirs -o ~/drandulet/reset_mac.sh && chmod +x ~/drandulet/reset_mac.sh && bash ~/drandulet/reset_mac.sh
 	    ;;
