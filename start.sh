@@ -13,9 +13,7 @@ OPTIONS=(1 "Configurate/Manage WireGuard "
          2 "Port Forwarding"
          3 "Send WireGuard config to macOS"
 	 4 "Reboot VPN Server"
-	 5 "Reboot macOS"
-	 6 "Start Wireguard on macOS"
- 	 7 "Stop Wireguard on macOS")
+	 5 "Reboot macOS")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -41,11 +39,5 @@ case $CHOICE in
 	    ;;
     	
     	5)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/reset_mac.sh --create-dirs -o ~/drandulet/reset_mac.sh && chmod +x ~/drandulet/reset_mac.sh && bash ~/drandulet/reset_mac.sh
-	    ;;
-	
-	6)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/macwg_up.sh --create-dirs -o ~/drandulet/macwg_up.sh && chmod +x ~/drandulet/macwg_up.sh && bash ~/drandulet/macwg_up.sh
-	    ;;
-        
-	7)  curl -s https://raw.githubusercontent.com/SantoMozzarella/Drandulet/master/elements/macwg_down.sh --create-dirs -o ~/drandulet/macwg_down.sh && chmod +x ~/drandulet/macwg_down.sh && bash ~/drandulet/macwg_down.sh	    
 	    ;;
 esac
