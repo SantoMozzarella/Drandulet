@@ -22,4 +22,4 @@ echo -e "Your VNC to MAC: ${vpnip}:5900 \nYour NoMachine to MAC: ${vpnip}:4000  
 echo -e "Remember this dude, ok? \n"
 echo -e "\n"
 read -n 1 -r -s -p $'If yes - Press Enter to main menu\n'
-bash ~/manage.sh
+bash ~/start.sh
