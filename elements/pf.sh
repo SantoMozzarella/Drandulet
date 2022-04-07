@@ -11,7 +11,7 @@ echo -e "----------------------------------\n"
 echo -e "\n"
 echo -e "Step 1: Configurate port forwarding\n"
 read -p "Enter macOS IP:" macip
-read -p "Enter VPN server IP:" vpnip
+vpnip=$(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') 
 iptables -F
 iptables -t nat -I PREROUTING -p tcp -d $vpnip --dport 5900 -j DNAT --to-destination $macip:5900
 iptables -t nat -I PREROUTING -p tcp -d $vpnip --dport 4000 -j DNAT --to-destination $macip:4000
