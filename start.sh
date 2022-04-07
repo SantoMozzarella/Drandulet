@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt update -qq && apt install -qq dialog -y 
 alias drandulet="~/start.sh"
+apt update -qq && apt install -qq dialog -y 
 
 HEIGHT=15
 WIDTH=50
